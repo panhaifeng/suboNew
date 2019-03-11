@@ -1,0 +1,452 @@
+[2018-12-10 13:51:41 0.07803100] ======= FleaPHP Loaded =======
+[2018-12-10 13:51:42] REQUEST_URI: /subo/index.php?controller=Login&action=login
+[2018-12-10 13:51:42] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:51:42] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:51:42] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2018-12-10 13:51:42] [debug] :sql: SELECT  `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`userName` = 'admin'  LIMIT 1
+[2018-12-10 13:51:42 0.42604300] ======= FleaPHP End (elapsed: 1.348012 seconds) =======
+
+[2018-12-10 13:51:42 0.97499600] ======= FleaPHP Loaded =======
+[2018-12-10 13:51:44] REQUEST_URI: /subo/index.php?controller=Main&action=index
+[2018-12-10 13:51:44] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:51:44] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:51:44] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2018-12-10 13:51:44] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2018-12-10 13:51:45 0.72086100] ======= FleaPHP End (elapsed: 2.745865 seconds) =======
+
+[2018-12-10 13:51:46 0.76089000] ======= FleaPHP Loaded =======
+[2018-12-10 13:51:47] REQUEST_URI: /subo/Index.php?controller=main&action=Welcome
+[2018-12-10 13:51:47] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:51:47] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:51:47] [debug] :sql: SELECT * FROM `oa_message` where kindName='行政通知' order by id desc limit 0,10
+[2018-12-10 13:51:47] [debug] :sql: SELECT * FROM `oa_message` where kindName='生产通知' order by id desc limit 0,10
+[2018-12-10 13:51:47] [debug] :sql: SELECT x.*,y.orderCode FROM `trade_order2product` x
+		left join trade_order y on x.orderId=y.id
+		where x.dateJiaohuo>='2018-12-10' and x.dateJiaohuo <= '2018-12-17'
+		group by x.orderid order by dateJiaohuo
+[2018-12-10 13:51:48] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2018-12-10 13:51:48] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2018-12-10 13:51:48] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2018-12-10 13:51:48] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2018-12-10 13:51:49] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2018-12-10 13:51:49] [debug] :sql: select x.* from jichu_employ x
+		left join jichu_department y on y.id=x.depId
+		where depName='销售部' or depName='业务部'
+		and isFire=0
+[2018-12-10 13:51:49] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_client`
+[2018-12-10 13:51:49] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2018-12-10 13:51:49] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2018-12-10 13:51:49] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2018-12-10 13:51:49] [debug] :sql: select * from jichu_client where 1 order by  letters
+[2018-12-10 13:51:49 0.91682600] ======= FleaPHP End (elapsed: 3.155936 seconds) =======
+
+[2018-12-10 13:51:49 0.93321700] ======= FleaPHP Loaded =======
+[2018-12-10 13:51:50] REQUEST_URI: /subo/index.php?controller=main&action=getmenu
+[2018-12-10 13:51:50] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:51:50] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:51:50 0.99402000] ======= FleaPHP End (elapsed: 1.060803 seconds) =======
+
+[2018-12-10 13:51:51 0.00533000] ======= FleaPHP Loaded =======
+[2018-12-10 13:51:52] REQUEST_URI: /subo/index.php?controller=tool&action=GetPopByAjax
+[2018-12-10 13:51:52] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:51:52] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:51:52 0.16209400] ======= FleaPHP End (elapsed: 1.156764 seconds) =======
+
+[2018-12-10 13:51:52 0.17535700] ======= FleaPHP Loaded =======
+[2018-12-10 13:51:52] REQUEST_URI: /subo/Index.php?controller=Yixiang_Client&action=GetJsonByTraderId&traderId=&all=n
+[2018-12-10 13:51:52] [exception] :FLEA_Exception_MissingController: 缺少控制器 "Yixiang_Client".
+[2018-12-10 13:51:52 0.29588500] ======= FleaPHP End (elapsed: 0.120528 seconds) =======
+
+[2018-12-10 13:51:55 0.58157300] ======= FleaPHP Loaded =======
+[2018-12-10 13:51:56] REQUEST_URI: /subo/index.php?controller=Cangku_Chengpin_Diaobo&action=Add
+[2018-12-10 13:51:56] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:51:56] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:51:56] [debug] :sql: SHOW FULL COLUMNS FROM `trade_order`
+[2018-12-10 13:51:56] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_chuku`
+[2018-12-10 13:51:57] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_chuku2product`
+[2018-12-10 13:51:57] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_kuwei`
+[2018-12-10 13:51:57] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_ruku`
+[2018-12-10 13:51:57] [debug] :sql: select * from jichu_kuwei where 1
+[2018-12-10 13:51:57] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2018-12-10 13:51:57] [debug] :sql: select chukuCode from `cangku_common_chuku` where chukuCode like '_________' order by chukuCode desc limit 0,1
+[2018-12-10 13:51:57] [debug] :sql: select chukuCode from `cangku_common_chuku` where chukuCode like '_________' order by chukuCode desc limit 0,1
+[2018-12-10 13:51:58 0.43536300] ======= FleaPHP End (elapsed: 2.853790 seconds) =======
+
+[2018-12-10 13:51:59 0.96153900] ======= FleaPHP Loaded =======
+[2018-12-10 13:52:01] REQUEST_URI: /subo/index.php?controller=Cangku_Chengpin_Ruku&action=Add
+[2018-12-10 13:52:01] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:52:01] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:52:01] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_ruku2product`
+[2018-12-10 13:52:01] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_client`
+[2018-12-10 13:52:01] [debug] :sql: select * from jichu_kuwei where 1
+[2018-12-10 13:52:01] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2018-12-10 13:52:01] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2018-12-10 13:52:01] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2018-12-10 13:52:01] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2018-12-10 13:52:01] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2018-12-10 13:52:01] [debug] :sql: select rukuCode from `cangku_common_ruku` where rukuCode like 'SCRKA_________' order by rukuCode desc limit 0,1
+[2018-12-10 13:52:01 0.84230100] ======= FleaPHP End (elapsed: 1.880762 seconds) =======
+
+[2018-12-10 13:52:14 0.26561200] ======= FleaPHP Loaded =======
+[2018-12-10 13:52:15] REQUEST_URI: /subo/index.php?controller=Cangku_Yuanliao_Ruku&action=add
+[2018-12-10 13:52:15] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:52:15] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_ruku`
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_ruku2product`
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_client`
+[2018-12-10 13:52:15] [debug] :sql: select * from jichu_kuwei where 1
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2018-12-10 13:52:15] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2018-12-10 13:52:15] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2018-12-10 13:52:15] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2018-12-10 13:52:15] [debug] :sql: select rukuCode from `cangku_common_ruku` where rukuCode like 'CGRKA_________' order by rukuCode desc limit 0,1
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_supplier`
+[2018-12-10 13:52:15] [debug] :sql: SELECT  `jichu_supplier`.`id` AS flea_pkref_id, `jichu_supplier`.* FROM `jichu_supplier`  
+[2018-12-10 13:52:15] [debug] :sql: SELECT `jichu_supplier`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ` LEFT JOIN `jichu_supplier` ON `jichu_supplier`.`id` IN ('1','2','3','4','5','6','7','8','9','12','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51') WHERE `jichu_supplier`.`traderId` = `jichu_employ`.`id` 
+[2018-12-10 13:52:15] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_supplier_taitou`
+[2018-12-10 13:52:15] [debug] :sql: SELECT `jichu_supplier_taitou`.`supplierId` AS flea_pkref_id, `jichu_supplier_taitou`.* FROM `jichu_supplier_taitou`  WHERE `jichu_supplier_taitou`.`supplierId` IN ('1','2','3','4','5','6','7','8','9','12','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51')
+[2018-12-10 13:52:15 0.78411200] ======= FleaPHP End (elapsed: 1.518500 seconds) =======
+
+[2018-12-10 13:52:18 0.08954100] ======= FleaPHP Loaded =======
+[2018-12-10 13:52:19] REQUEST_URI: /subo/index.php?controller=Cangku_Yuanliao_Xsck&action=add
+[2018-12-10 13:52:19] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:52:19] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:52:19] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_chuku`
+[2018-12-10 13:52:19] [debug] :sql: SHOW FULL COLUMNS FROM `cangku_common_chuku2product`
+[2018-12-10 13:52:19] [debug] :sql: select * from jichu_kuwei where 1
+[2018-12-10 13:52:19] [debug] :sql: select chukuCode from `cangku_common_chuku` where chukuCode like 'XSCKA_________' order by chukuCode desc limit 0,1
+[2018-12-10 13:52:19] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2018-12-10 13:52:19] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2018-12-10 13:52:19] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2018-12-10 13:52:19] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_department`
+[2018-12-10 13:52:19] [debug] :sql: SELECT  `jichu_department`.`id` AS flea_pkref_id, `jichu_department`.* FROM `jichu_department`  
+[2018-12-10 13:52:19] [debug] :sql: SELECT `jichu_employ`.`depId` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ`  WHERE `jichu_employ`.`depId` IN ('1','2','3','4','5','6')
+[2018-12-10 13:52:19 0.61181700] ======= FleaPHP End (elapsed: 1.522276 seconds) =======
+
+[2018-12-10 13:52:25 0.30444700] ======= FleaPHP Loaded =======
+[2018-12-10 13:52:26] REQUEST_URI: /subo/index.php?controller=Cangku_Yuanliao_SCLY&action=add
+[2018-12-10 13:52:26] [debug] :sql: SELECT VERSION()
+[2018-12-10 13:52:26] [debug] :sql: SET NAMES 'utf8'
+[2018-12-10 13:52:26] [debug] :sql: select * from jichu_kuwei where 1
+[2018-12-10 13:52:26] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2018-12-10 13:52:26] [debug] :sql: select chukuCode from `cangku_common_chuku` where chukuCode like 'LLCKA_________' order by chukuCode desc limit 0,1
+[2018-12-10 13:52:26] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2018-12-10 13:52:26] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2018-12-10 13:52:26] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2018-12-10 13:52:26] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2018-12-10 13:52:26] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2018-12-10 13:52:26] [debug] :sql: SELECT  `jichu_department`.`id` AS flea_pkref_id, `jichu_department`.* FROM `jichu_department`  
+[2018-12-10 13:52:26] [debug] :sql: SELECT `jichu_employ`.`depId` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ`  WHERE `jichu_employ`.`depId` IN ('1','2','3','4','5','6')
+[2018-12-10 13:52:26 0.74219700] ======= FleaPHP End (elapsed: 1.437750 seconds) =======
+
+[2019-01-10 07:14:56 0.76401400] ======= FleaPHP Loaded =======
+[2019-01-10 07:14:57] REQUEST_URI: /subo/index.php?controller=Login&action=login
+[2019-01-10 07:14:57] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:14:57] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:14:57] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2019-01-10 07:14:58] [debug] :sql: SELECT  `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`userName` = 'admin'  LIMIT 1
+[2019-01-10 07:14:58 0.11108000] ======= FleaPHP End (elapsed: 1.347066 seconds) =======
+
+[2019-01-10 07:14:58 0.88201400] ======= FleaPHP Loaded =======
+[2019-01-10 07:14:59] REQUEST_URI: /subo/index.php?controller=Main&action=index
+[2019-01-10 07:14:59] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:14:59] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:14:59] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2019-01-10 07:15:00] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2019-01-10 07:15:01 0.96209300] ======= FleaPHP End (elapsed: 3.080079 seconds) =======
+
+[2019-01-10 07:15:02 0.76515200] ======= FleaPHP Loaded =======
+[2019-01-10 07:15:03] REQUEST_URI: /subo/Index.php?controller=main&action=Welcome
+[2019-01-10 07:15:03] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:15:03] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:15:03] [debug] :sql: SELECT * FROM `oa_message` where kindName='行政通知' order by id desc limit 0,10
+[2019-01-10 07:15:03] [debug] :sql: SELECT * FROM `oa_message` where kindName='生产通知' order by id desc limit 0,10
+[2019-01-10 07:15:03] [debug] :sql: SELECT x.*,y.orderCode FROM `trade_order2product` x
+		left join trade_order y on x.orderId=y.id
+		where x.dateJiaohuo>='2019-01-10' and x.dateJiaohuo <= '2019-01-17'
+		group by x.orderid order by dateJiaohuo
+[2019-01-10 07:15:04] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2019-01-10 07:15:04] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:04] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2019-01-10 07:15:04] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:05] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:05] [debug] :sql: select x.* from jichu_employ x
+		left join jichu_department y on y.id=x.depId
+		where depName='销售部' or depName='业务部'
+		and isFire=0
+[2019-01-10 07:15:05] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_client`
+[2019-01-10 07:15:05] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:05] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:05] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:05] [debug] :sql: select * from jichu_client where 1 order by  letters
+[2019-01-10 07:15:05 0.94009200] ======= FleaPHP End (elapsed: 3.174940 seconds) =======
+
+[2019-01-10 07:15:02 0.80409200] ======= FleaPHP Loaded =======
+[2019-01-10 07:15:07] REQUEST_URI: /subo/index.php?controller=main&action=getmenu
+[2019-01-10 07:15:07] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:15:07] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:15:07 0.23409200] ======= FleaPHP End (elapsed: 4.430000 seconds) =======
+
+[2019-01-10 07:15:02 0.82610100] ======= FleaPHP Loaded =======
+[2019-01-10 07:15:08] REQUEST_URI: /subo/index.php?controller=tool&action=GetPopByAjax
+[2019-01-10 07:15:08] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:15:08] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:15:08 0.58012100] ======= FleaPHP End (elapsed: 5.754020 seconds) =======
+
+[2019-01-10 07:15:06 0.21209300] ======= FleaPHP Loaded =======
+[2019-01-10 07:15:08] REQUEST_URI: /subo/Index.php?controller=Yixiang_Client&action=GetJsonByTraderId&traderId=&all=n
+[2019-01-10 07:15:08] [exception] :FLEA_Exception_MissingController: 缺少控制器 "Yixiang_Client".
+[2019-01-10 07:15:08 0.78409300] ======= FleaPHP End (elapsed: 2.572000 seconds) =======
+
+[2019-01-10 07:15:08 0.90009000] ======= FleaPHP Loaded =======
+[2019-01-10 07:15:09] REQUEST_URI: /subo/index.php?controller=Trade_Order&action=right
+[2019-01-10 07:15:10] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:15:10] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:15:10] [debug] :sql: SHOW FULL COLUMNS FROM `trade_order`
+[2019-01-10 07:15:10] [debug] :sql: SELECT  `trade_order`.`id` AS flea_pkref_id, `trade_order`.`orderCode` FROM `trade_order`   ORDER BY orderCode desc LIMIT 1
+[2019-01-10 07:15:10] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`traderId` = `jichu_employ`.`id` 
+[2019-01-10 07:15:10] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_client`.* FROM `jichu_client` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`clientId` = `jichu_client`.`id` 
+[2019-01-10 07:15:10] [debug] :sql: SHOW FULL COLUMNS FROM `trade_order2product`
+[2019-01-10 07:15:10] [debug] :sql: SELECT `trade_order2product`.`orderId` AS flea_pkref_id, `trade_order2product`.* FROM `trade_order2product`  WHERE `trade_order2product`.`orderId` IN ('3958')
+[2019-01-10 07:15:10] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2019-01-10 07:15:10] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:10] [debug] :sql: select x.* from jichu_employ x
+		left join jichu_department y on y.id=x.depId
+		where depName='销售部' or depName='业务部'
+		and isFire=0
+[2019-01-10 07:15:10] [debug] :sql: SELECT x.* 
+    		from jichu_employ x
+			left join jichu_department y on y.id=x.depId
+			where depName like '%跟单%'
+			and isFire=0
+[2019-01-10 07:15:10] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:10] [debug] :sql: select
+                x.orderCode,
+                x.orderDate,
+                x.clientId,
+                x.traderId,
+                x.clientOrder,
+                x.orderMemo,
+                x.id,
+                x.bizhong,
+                x.ord2proId,
+                x.isExport,
+                p.proName,
+                p.guige,
+                y.compName,
+                m.employName,
+                g.id as guozhangId
+                from (select y.id,
+                       y.orderCode,
+                       y.orderDate,
+                       y.clientId,
+                       y.traderId,
+                       y.clientOrder,
+                       y.memo as orderMemo,
+                       y.bizhong,
+                       y.isExport,
+                       t.productId,
+                       t.id as ord2proId
+                           from trade_order y
+                            join trade_order2product t on y.id =t.orderId
+                           ) x
+                left join jichu_product p on p.id = x.productId
+                left join jichu_client y on x.clientId = y.id
+                left join jichu_employ m on m.id=x.traderId
+                left join caiwu_ar_guozhang g on g.orderId=x.id
+                where 1 and orderDate >= '2018-12-11' and orderDate<='2019-01-10' group by x.id order by orderDate desc, orderCode desc LIMIT 0, 25
+[2019-01-10 07:15:10] [debug] :sql: SHOW FULL COLUMNS FROM `trade_order_shenhe`
+[2019-01-10 07:15:10] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:10] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:10] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:11] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:11] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:11] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:11] [debug] :sql: select * from jichu_client where 1 order by  letters
+[2019-01-10 07:15:11 0.95512100] ======= FleaPHP End (elapsed: 3.055031 seconds) =======
+
+[2019-01-10 07:15:09 0.34311300] ======= FleaPHP Loaded =======
+[2019-01-10 07:15:12] REQUEST_URI: /subo/index.php?controller=Trade_Order&action=add
+[2019-01-10 07:15:12] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:15:12] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:15:13] [debug] :sql: SELECT  `trade_order`.`id` AS flea_pkref_id, `trade_order`.`orderCode` FROM `trade_order`   ORDER BY orderCode desc LIMIT 1
+[2019-01-10 07:15:13] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`traderId` = `jichu_employ`.`id` 
+[2019-01-10 07:15:13] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_client`.* FROM `jichu_client` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`clientId` = `jichu_client`.`id` 
+[2019-01-10 07:15:13] [debug] :sql: SELECT `trade_order2product`.`orderId` AS flea_pkref_id, `trade_order2product`.* FROM `trade_order2product`  WHERE `trade_order2product`.`orderId` IN ('3958')
+[2019-01-10 07:15:13] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:13] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:13] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:13] [debug] :sql: select x.* from jichu_employ x
+		left join jichu_department y on y.id=x.depId
+		where depName='销售部' or depName='业务部'
+		and isFire=0
+[2019-01-10 07:15:13] [debug] :sql: SELECT x.* 
+    		from jichu_employ x
+			left join jichu_department y on y.id=x.depId
+			where depName like '%跟单%'
+			and isFire=0
+[2019-01-10 07:15:13] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:13] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:13] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:13] [debug] :sql: SELECT  `trade_order`.`id` AS flea_pkref_id, `trade_order`.`orderCode` FROM `trade_order`   ORDER BY orderCode desc LIMIT 1
+[2019-01-10 07:15:13] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`traderId` = `jichu_employ`.`id` 
+[2019-01-10 07:15:13] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_client`.* FROM `jichu_client` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`clientId` = `jichu_client`.`id` 
+[2019-01-10 07:15:13] [debug] :sql: SELECT `trade_order2product`.`orderId` AS flea_pkref_id, `trade_order2product`.* FROM `trade_order2product`  WHERE `trade_order2product`.`orderId` IN ('3958')
+[2019-01-10 07:15:13] [debug] :sql: select traderId  from acm_user2trader where userId = 1
+[2019-01-10 07:15:13] [debug] :sql: SELECT  `jichu_employ`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ`  WHERE `jichu_employ`.`id` = NULL  LIMIT 1
+[2019-01-10 07:15:14 0.63308900] ======= FleaPHP End (elapsed: 5.289976 seconds) =======
+
+[2019-01-10 07:15:25 0.93609100] ======= FleaPHP Loaded =======
+[2019-01-10 07:15:26] REQUEST_URI: /subo/index.php?controller=Trade_Order&action=add
+[2019-01-10 07:15:26] [debug] :sql: SELECT VERSION()
+[2019-01-10 07:15:26] [debug] :sql: SET NAMES 'utf8'
+[2019-01-10 07:15:26] [debug] :sql: SHOW FULL COLUMNS FROM `trade_order`
+[2019-01-10 07:15:27] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2019-01-10 07:15:27] [debug] :sql: SELECT  `trade_order`.`id` AS flea_pkref_id, `trade_order`.`orderCode` FROM `trade_order`   ORDER BY orderCode desc LIMIT 1
+[2019-01-10 07:15:27] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`traderId` = `jichu_employ`.`id` 
+[2019-01-10 07:15:27] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_client`
+[2019-01-10 07:15:27] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_client`.* FROM `jichu_client` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`clientId` = `jichu_client`.`id` 
+[2019-01-10 07:15:27] [debug] :sql: SHOW FULL COLUMNS FROM `trade_order2product`
+[2019-01-10 07:15:27] [debug] :sql: SELECT `trade_order2product`.`orderId` AS flea_pkref_id, `trade_order2product`.* FROM `trade_order2product`  WHERE `trade_order2product`.`orderId` IN ('3958')
+[2019-01-10 07:15:27] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2019-01-10 07:15:27] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:27] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2019-01-10 07:15:27] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:27] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:27] [debug] :sql: select x.* from jichu_employ x
+		left join jichu_department y on y.id=x.depId
+		where depName='销售部' or depName='业务部'
+		and isFire=0
+[2019-01-10 07:15:27] [debug] :sql: SELECT x.* 
+    		from jichu_employ x
+			left join jichu_department y on y.id=x.depId
+			where depName like '%跟单%'
+			and isFire=0
+[2019-01-10 07:15:27] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-01-10 07:15:27] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-01-10 07:15:27] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-01-10 07:15:27] [debug] :sql: SELECT  `trade_order`.`id` AS flea_pkref_id, `trade_order`.`orderCode` FROM `trade_order`   ORDER BY orderCode desc LIMIT 1
+[2019-01-10 07:15:27] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`traderId` = `jichu_employ`.`id` 
+[2019-01-10 07:15:27] [debug] :sql: SELECT `trade_order`.`id` AS flea_pkref_id, `jichu_client`.* FROM `jichu_client` LEFT JOIN `trade_order` ON `trade_order`.`id` IN ('3958') WHERE `trade_order`.`clientId` = `jichu_client`.`id` 
+[2019-01-10 07:15:27] [debug] :sql: SELECT `trade_order2product`.`orderId` AS flea_pkref_id, `trade_order2product`.* FROM `trade_order2product`  WHERE `trade_order2product`.`orderId` IN ('3958')
+[2019-01-10 07:15:27] [debug] :sql: select traderId  from acm_user2trader where userId = 1
+[2019-01-10 07:15:27] [debug] :sql: SELECT  `jichu_employ`.`id` AS flea_pkref_id, `jichu_employ`.* FROM `jichu_employ`  WHERE `jichu_employ`.`id` = NULL  LIMIT 1
+[2019-01-10 07:15:27 0.47309600] ======= FleaPHP End (elapsed: 1.537005 seconds) =======
+
+[2019-03-07 17:25:48 0.95034600] ======= FleaPHP Loaded =======
+[2019-03-07 17:25:49] REQUEST_URI: /subo/index.php?controller=Login&action=login
+[2019-03-07 17:25:49] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:25:49] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:25:49] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2019-03-07 17:25:50] [debug] :sql: SELECT  `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`userName` = 'admin'  LIMIT 1
+[2019-03-07 17:25:50 0.21847100] ======= FleaPHP End (elapsed: 1.268125 seconds) =======
+
+[2019-03-07 17:25:51 0.42546600] ======= FleaPHP Loaded =======
+[2019-03-07 17:25:52] REQUEST_URI: /subo/index.php?controller=Main&action=index
+[2019-03-07 17:25:52] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:25:52] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:25:52] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2019-03-07 17:25:52] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2019-03-07 17:25:54 0.16672600] ======= FleaPHP End (elapsed: 2.741260 seconds) =======
+
+[2019-03-07 17:25:55 0.76335100] ======= FleaPHP Loaded =======
+[2019-03-07 17:25:56] REQUEST_URI: /subo/Index.php?controller=main&action=Welcome
+[2019-03-07 17:25:56] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:25:56] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:25:56] [debug] :sql: SELECT * FROM `oa_message` where kindName='行政通知' order by id desc limit 0,10
+[2019-03-07 17:25:56] [debug] :sql: SELECT * FROM `oa_message` where kindName='生产通知' order by id desc limit 0,10
+[2019-03-07 17:25:56] [debug] :sql: SELECT x.*,y.orderCode FROM `trade_order2product` x
+		left join trade_order y on x.orderId=y.id
+		where x.dateJiaohuo>='2019-03-07' and x.dateJiaohuo <= '2019-03-14'
+		group by x.orderid order by dateJiaohuo
+[2019-03-07 17:25:57] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_employ`
+[2019-03-07 17:25:57] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-03-07 17:25:57] [debug] :sql: SHOW FULL COLUMNS FROM `acm_roledb`
+[2019-03-07 17:25:57] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-03-07 17:25:57] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-03-07 17:25:57] [debug] :sql: select x.* from jichu_employ x
+		left join jichu_department y on y.id=x.depId
+		where depName='销售部' or depName='业务部'
+		and isFire=0
+[2019-03-07 17:25:57] [debug] :sql: SHOW FULL COLUMNS FROM `jichu_client`
+[2019-03-07 17:25:57] [debug] :sql: SELECT  `acm_userdb`.`id` AS flea_pkref_id, `acm_userdb`.* FROM `acm_userdb`  WHERE `acm_userdb`.`id` = 1  LIMIT 1
+[2019-03-07 17:25:57] [debug] :sql: SELECT `acm_user2role`.`userId` AS flea_pkref_id, `acm_roledb`.* FROM `acm_user2role` INNER JOIN `acm_roledb` ON `acm_roledb`.`id` = `acm_user2role`.`roleId`  WHERE `acm_user2role`.`userId` IN ('1')
+[2019-03-07 17:25:57] [debug] :sql: SELECT `acm_user2trader`.`userId` AS flea_pkref_id, `jichu_employ`.* FROM `acm_user2trader` INNER JOIN `jichu_employ` ON `jichu_employ`.`id` = `acm_user2trader`.`traderId`  WHERE `acm_user2trader`.`userId` IN ('1')
+[2019-03-07 17:25:57] [debug] :sql: select * from jichu_client where 1 order by  letters
+[2019-03-07 17:25:57 0.82739000] ======= FleaPHP End (elapsed: 2.064039 seconds) =======
+
+[2019-03-07 17:25:57 0.84937700] ======= FleaPHP Loaded =======
+[2019-03-07 17:25:58] REQUEST_URI: /subo/index.php?controller=tool&action=GetPopByAjax
+[2019-03-07 17:25:58] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:25:58] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:25:58 0.98235200] ======= FleaPHP End (elapsed: 1.132975 seconds) =======
+
+[2019-03-07 17:25:58 0.99579100] ======= FleaPHP Loaded =======
+[2019-03-07 17:26:00] REQUEST_URI: /subo/index.php?controller=main&action=getmenu
+[2019-03-07 17:26:00] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:26:00] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:26:00] [debug] :sql: SHOW FULL COLUMNS FROM `acm_userdb`
+[2019-03-07 17:26:00 0.20835300] ======= FleaPHP End (elapsed: 1.212562 seconds) =======
+
+[2019-03-07 17:26:00 0.22472400] ======= FleaPHP Loaded =======
+[2019-03-07 17:26:00] REQUEST_URI: /subo/Index.php?controller=Yixiang_Client&action=GetJsonByTraderId&traderId=&all=n
+[2019-03-07 17:26:00] [exception] :FLEA_Exception_MissingController: 缺少控制器 "Yixiang_Client".
+[2019-03-07 17:26:00 0.26865300] ======= FleaPHP End (elapsed: 0.043929 seconds) =======
+
+[2019-03-07 17:26:56 0.03074000] ======= FleaPHP Loaded =======
+[2019-03-07 17:26:57] REQUEST_URI: /subo/index.php?controller=main&action=GetTongzhiByAjax
+[2019-03-07 17:26:57] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:26:57] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:26:57] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2019-03-07 17:26:57] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2019-03-07 17:26:57] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2019-03-07 17:26:57 0.40773300] ======= FleaPHP End (elapsed: 1.376993 seconds) =======
+
+[2019-03-07 17:27:57 0.73880500] ======= FleaPHP Loaded =======
+[2019-03-07 17:27:58] REQUEST_URI: /subo/index.php?controller=main&action=GetTongzhiByAjax
+[2019-03-07 17:27:58] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:27:58] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:27:58] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2019-03-07 17:27:58] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2019-03-07 17:27:58] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2019-03-07 17:27:58 0.96864600] ======= FleaPHP End (elapsed: 1.229841 seconds) =======
+
+[2019-03-07 17:28:59 0.29335400] ======= FleaPHP Loaded =======
+[2019-03-07 17:29:00] REQUEST_URI: /subo/index.php?controller=main&action=GetTongzhiByAjax
+[2019-03-07 17:29:00] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:29:00] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:29:00] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2019-03-07 17:29:00] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2019-03-07 17:29:00] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2019-03-07 17:29:00 0.37779000] ======= FleaPHP End (elapsed: 1.084436 seconds) =======
+
+[2019-03-07 17:30:01 0.11464300] ======= FleaPHP Loaded =======
+[2019-03-07 17:30:02] REQUEST_URI: /subo/index.php?controller=main&action=GetTongzhiByAjax
+[2019-03-07 17:30:02] [debug] :sql: SELECT VERSION()
+[2019-03-07 17:30:02] [debug] :sql: SET NAMES 'utf8'
+[2019-03-07 17:30:02] [debug] :sql: SHOW FULL COLUMNS FROM `oa_message`
+[2019-03-07 17:30:02] [debug] :sql: SHOW FULL COLUMNS FROM `acm_user2message`
+[2019-03-07 17:30:02] [debug] :sql: SELECT x.*,count(*) as cnt FROM `oa_message`  x
+		left join oa_message_class y on y.className=x.kindName
+		where y.isWindow=0
+		and not exists(select * from acm_user2message z where z.messageId=x.id and z.userId='1')
+[2019-03-07 17:30:02 0.23266900] ======= FleaPHP End (elapsed: 1.118026 seconds) =======
+
